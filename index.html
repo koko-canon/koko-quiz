@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurvedic Plants Quiz</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<body>
+
+    <button class="hamburger-btn" id="hamburger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="sidebar" id="sidebar">
+        <ul class="sidebar-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#quiz" class="active">Quiz</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#plants">Plant List</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#help">Help</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+     <div class="window" id="help-window">
+        <button class="close-window">×</button>
+        <div class="help-content">
+            <h2>Help & FAQ</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        How to Play
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>1. Look at the plant name provided</p>
+                        <p>2. Enter the botanical name in the input field</p>
+                        <p>3. Click submit to check your answer</p>
+                        <p>4. Use hints if you need help</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Scoring System
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>• Correct answer: 1 point</p>
+                        <p>• Incorrect answer: 0 points</p>
+                        <p>• Using hints doesn't affect scoring</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Technical Issues
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>If you encounter any issues:</p>
+                        <p>1. Refresh the page</p>
+                        <p>2. Clear browser cache</p>
+                        <p>3. Contact support if problems persist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-window" id="about-window">
+        <button class="close-about" id="close-about">×</button>
+        <div class="about-content">
+            <h2>🌿 About Ayurvedic Plants Quiz 🌿</h2>
+            <p>Welcome to our interactive learning platform dedicated to Ayurvedic plants!</p>
+            
+            <div class="feature-list">
+                <ul>
+                    <li>Learn botanical names of various Ayurvedic plants</li>
+                    <li>Discover plant families and their characteristics</li>
+                    <li>Explore their uses and benefits</li>
+                    <li>Test your knowledge with interactive quizzes</li>
+                    <li>Access helpful hints when needed</li>
+                </ul>
+
+                </ul>
+            </div>
+        
+            <p>This educational tool is designed to help students expand their knowledge of Ayurvedic plants in an engaging and interactive way.</p>
+        
+            <h3>🌿About Me🌿</h3>
+            <p>Hello! I am an undergraduate Ayurveda student who always found difficulty with the memorization part of Ayurveda. That's how the seed of this idea got sprouted. The goal of this website is to make learning enjoyable rather than tedious.</p>
+        
+            <p>Thanks for visiting! Your feedback is most valued. Feel free to email me with suggestions and improvements😊</p>
+        
+            <p>Version 1.0 | Created with 💚 for plant lovers</p>
+       </div>
+    </div>
+
+
+
+    <div class="window" id="home-window">
+        <button class="close-window">×</button>
+        <div class="home-content">
+            <div class="welcome-image">🌿</div>
+            <h2>Welcome to Ayurvedic Plants Quiz!</h2>
+            <p>Explore the fascinating world of medicinal plants and test your knowledge about their botanical names, families, and properties.</p>
+            <div class="feature-list">
+                <ul>
+                    <li>Learn about various Ayurvedic plants</li>
+                    <li>Test your knowledge with interactive quizzes</li>
+                    <li>Get instant feedback on your answers</li>
+                    <li>Access detailed information about each plant</li>
+                    <li>Track your progress as you learn</li>
+                </ul>
+            </div>
+            <p>Start your journey into the world of Ayurvedic plants today!</p>
+        </div>
+    </div>
+
+    <div class="window" id="contact-window">
+        <button class="close-window">×</button>
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p>Thank you for using our Ayurvedic Plants Quiz! We're continuously working to improve this educational resource.</p>
+                
+                <p>If you have any questions, feedback, or suggestions about the quiz, please feel free to reach out to us:</p>
+                
+                <div class="email-container">
+                    <strong>Email:</strong> <a href="mailto:kokocanon12@gmail.com">kokocanon12@gmail.com</a>
+                </div>
+                
+                <div class="feedback-section">
+                    <h3>Quick Feedback</h3>
+                    <p>Was this quiz helpful for your studies?</p>
+                    <div class="feedback-buttons">
+                        <button id="feedback-yes" class="feedback-btn">Yes! Very helpful</button>
+                        <button id="feedback-somewhat" class="feedback-btn">Somewhat helpful</button>
+                        <button id="feedback-no" class="feedback-btn">Needs improvement</button>
+                    </div>
+                    <p id="feedback-thank-you" style="display: none;">Thank you for your feedback!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="window" id="plant-list-window">
+        <button class="close-window">×</button>
+        <div class="plant-list-content">
+            <h2>🌿 Ayurvedic Plant Directory🌿</h2>
+            
+            <!-- Quiz Set Selector Tabs -->
+            <div class="quiz-set-tabs">
+                <button class="set-tab active" data-set="setA">Set A</button>
+                <button class="set-tab" data-set="setB">Set B</button>
+                <button class="set-tab" data-set="setC">Set C</button>
+                <button class="set-tab" data-set="setD">Set D</button>
+            </div>
+            
+            <!-- Plants Grid Container (will be populated by JS) -->
+            <div class="plants-container">
+                <div id="setA-plants" class="plant-set active">
+                    <!-- Plants from Set A will be loaded here -->
+                </div>
+                <div id="setB-plants" class="plant-set">
+                    <!-- Plants from Set B will be loaded here -->
+                </div>
+                <div id="setC-plants" class="plant-set">
+                    <!-- Plants from Set C will be loaded here -->
+                </div>
+                <div id="setD-plants" class="plant-set">
+                    <!-- Plants from Set D will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="quiz-container">
+        <div class="decorative-leaf leaf-1"></div>
+        <div class="decorative-leaf leaf-2"></div>
+        <div class="decorative-leaf leaf-3"></div>
+        <div class="decorative-leaf leaf-4"></div>
+        <h1>🌿Ayurvedic Plants Quiz🌿</h1>
+        
+        <!-- Quiz Selection Screen -->
+        <div id="quiz-selection">
+            <h2>🌿🌻Choose a Quiz Set🌻🌿</h2>
+            <p>Select a category to begin your plant identification journey!</p>
+            
+            <button class="quiz-set-btn" data-set="setA">
+                Quiz Set A<br>
+            </button>
+            
+            <button class="quiz-set-btn" data-set="setB">
+                Quiz Set B<br>
+            </button>
+            
+            <button class="quiz-set-btn" data-set="setC">
+                Quiz Set C<br>
+            </button>
+            
+            <button class="quiz-set-btn" data-set="setD">
+                Quiz Set D<br>
+            </button>
+        </div>
+
+        
+        <!-- Quiz Content -->
+        <div id="quiz" style="display: none;">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h2 id="plant-name"></h2>
+                        <p>Enter the botanical name:</p>
+                        <input type="text" id="user-answer" placeholder="Type botanical name here">
+                        <button id="submit-btn">Submit Answer</button>
+                        <button class="hint-btn" id="hint-btn">Need a Hint?</button>
+                        <div class="hint-options" id="hint-options"></div>
+                    </div>
+                    <div class="card-back">
+                        <img id="plant-image" class="plant-image" src="" alt="Plant Image">
+                        <h3 id="botanical-name"></h3>
+                        <h4 id="family-name"></h4>
+                        <p id="plant-description"></p>
+                        <button id="info-btn" class="info-btn">Info</button>
+                        <button id="next-btn">Next Plant</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card" id="info-card">
+                <button class="close-btn" id="close-info-btn" aria-label="Close info card"></button>
+                <h3>Plant Information</h3>
+                
+                <div class="shloka-box">
+                        <h4>Sanskrit Shloka</h4>
+                        <div class="shloka-text">
+                               
+                        </div>
+                        <div class="shloka-reference">
+                               
+                        </div>
+                </div>
+
+                <div class="ras-panchak-box">
+                        <h4>Ras Panchak (Ayurvedic Properties)</h4>
+                        <div class="ras-panchak-grid">
+                                <div class="ras-item">
+                                        <strong>Rasa (Taste)</strong>
+                                        <p></p>
+                                </div>
+                                <div class="ras-item">
+                                        <strong>Guna (Properties)</strong>
+                                        <p></p>
+                                </div>
+                                <div class="ras-item">
+                                        <strong>Virya (Potency)</strong>
+                                        <p></p>
+                                </div>
+                                <div class="ras-item">
+                                        <strong>Vipaka (Post-digestive effect)</strong>
+                                        <p></p>
+                                </div>
+                                <div class="ras-item full-width">
+                                        <strong>Prabhav (Special Effect)</strong>
+                                        <p></p>
+                                </div>
+                                <div class="ras-item full-width">
+                                        <strong>Varga (Plant Type)</strong>
+                                        <p></p>
+                                </div>
+                        </div>
+                </div>
+
+                <div class="info-box">
+                        <h4>Paryaya (Sanskrit Synonyms)</h4>
+                        <ul class="info-list">
+                                <li><span class="info-label"></span> </li>
+                                <li><span class="info-label"></span></li>
+                                <li><span class="info-label"></span> </li>
+                                <li><span class="info-label"></span> </li>
+                                <li><span class="info-label"></span></li>
+                        </ul>
+                </div>
+
+                <div class="info-box">
+                        <h4>Vernacular Names</h4>
+                        <ul class="info-list">
+                                <li><span class="info-label"></span></li>
+                                <li><span class="info-label"></span></li>
+                                <li><span class="info-label"></span> </li>
+                                <li><span class="info-label"></span> </li>
+                                <li><span class="info-label"></span></li>
+                                <li><span class="info-label"></span> </li>
+                                <li><span class="info-label"></span> </li>
+                                <li><span class="info-label"></span> </li>
+                        </ul>
+                </div>
+
+                <div class="info-box">
+                        <h4>Scientific Classification</h4>
+                        <ul class="info-list">
+                                <li><span class="info-label"></span> </li>
+                                <li><span class="info-label"></span></li>
+                                <li><span class="info-label"></span> </li>
+                                <li><span class="info-label"></span> </li>
+                                <li><span class="info-label"></span> </li>
+                        </ul>
+                </div>
+
+                <div class="info-box">
+                        <h4>General Information</h4>
+                        <p class="plant-info-text" id="quick-info"></p>
+                </div>
+
+                <button class="back-to-plant-btn" id="back-to-plant-btn">Back to Plant</button>
+        </div>
+        
+        
+        <div id="result"></div>
+           <button id="home-btn" class="home-btn" style="display: none;">Back to Quiz Selection</button>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
